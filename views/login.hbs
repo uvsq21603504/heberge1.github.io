@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style2.css">
+</head>
+<body>
+    <!-- Début forme du login de notre site -->
+    <div class="login-page">
+        <div class="form">
+            <form id="myForm" action="/user_create" onsubmit="return closeSelf(this)" method="POST">
+                    <div class="registerbox">
+                        <form action="/user_create" method="POST">
+                            <input type="text" name="email" placeholder="Enter Email ID"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  required>
+                             <input type="password" id="txtPassword" name="pass1" placeholder="Enter Password" required>
+                            <input class="but" type="submit" id="btnSubmit" value="Submit" onclick="return Validate()"/>
+                            <p class="message">Don't have an account? <a class="link" href="/register">Register</a></p>
+                </div>
+            </form>
+        </div>
+      </div>
+    <!-- Fin forme du login de notre site -->
+
+</body>
+</html>

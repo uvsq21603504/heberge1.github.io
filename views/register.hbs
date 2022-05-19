@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style2.css">
+</head>
+<body>
+
+    <!-- Début forme du register de notre site -->
+    <div class="login-page">
+        <div class="form">
+            <form id="myForm" action="/auth/register" onsubmit="return closeSelf(this)" method="POST">
+                    <div class="registerbox">
+                        <form action="/user_create" method="POST">
+                            <input type="text" name="name" placeholder="Enter Last Name" required>
+                             <input type="text" name="email" placeholder="Enter Email ID"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  required>
+                             <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                             <input type="password" id="passwordConfirm" name="passwordConfirm" placeholder="Retype Password" required>
+                            <input class="but" type="submit" id="btnSubmit" value="Submit" onclick="return Validate()" />
+                            <p class="message">Already registered? <a class="link" href="/login">Sign In</a></p>
+                </div>
+            </form>
+            {{#if message }}
+            <div class = " alert alert-danger mt-4">{{message}}</div>
+        {{/if}}
+        </div>
+      </div>
+    <!-- Fin forme du register de notre site -->
+
+</body>
+</html>
